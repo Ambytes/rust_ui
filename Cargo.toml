@@ -1,0 +1,12 @@
+[package]
+name = "rust_ui"
+version = "0.1.0"
+edition = "2021"
+authors = [
+  "Pascal Behmenburg <info@pascalbehmenburg.de>",
+  "Jonas Lauschke <natrocx@protonmail.ch>",
+]
+license = "AGPL-3.0-only"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
