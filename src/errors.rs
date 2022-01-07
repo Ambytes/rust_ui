@@ -15,22 +15,16 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-use std::process::exit;
+use std::error::Error;
+use std::fmt::Formatter;
 
-use rust_ui::engine::Engine;
+#[derive(Debug)]
+pub struct NoSuitableDeviceError;
 
-fn main() {
-    let engine = match Engine::new() {
-        Ok(e) => e,
-        Err(e) => {
-            log::error!("Error initializing vulkan. Message: {}", e);
-            abort();
-            return;
-        }
-    };
-    log::info!("Succesfully initialized vulkan engine.");
+impl std::fmt::Display for NoSuitableDeviceError {
+    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+        write!(f, "No vulkan capable devices found.")
+    }
 }
 
-fn abort() {
-    log::error!("Aborting...");
-}
+impl Error for NoSuitableDeviceError {}
