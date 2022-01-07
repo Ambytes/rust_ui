@@ -9,4 +9,15 @@ authors = [
 license = "AGPL-3.0-only"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+
 [dependencies]
+vulkano     = "0.27"
+vulkano-win = "0.27"
+winit       = "0.25" # We will have to use the winit-version provided by vulkano-winit
+log         = "^0.4"
+fern        = "^0.6"
+chrono      = "^0.4"
+
+
+[profile.release]
+lto = true # fat lto should be fine for now
