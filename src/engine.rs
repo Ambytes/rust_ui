@@ -1,6 +1,6 @@
 /*
     rust_ui
-    Copyright (C) 2022  Pascal Behmenburg, Jonas Lauschke
+    Copyright (C) 2022  Jonas Lauschke
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
